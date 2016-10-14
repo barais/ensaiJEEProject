@@ -29,7 +29,11 @@ public class ServletServer {
 					.addServlets(
 					          servlet("rinterpreter", RInterpreter.class)
                               .addMapping("/rservlet"),
-					 JspServletBuilder.createServlet("Default Jsp Servlet", "*.jsp")
+					          servlet("rload", LoadProgram.class)
+                              .addMapping("/load"),                              
+                              servlet("rloadrprograme", LoadSpecificR.class)
+                              .addMapping("/loadr/*"),                              
+                              JspServletBuilder.createServlet("Default Jsp Servlet", "*.jsp")
 
 			);
 

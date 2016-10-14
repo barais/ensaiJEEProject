@@ -55,6 +55,9 @@ public class RInterpreter extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 
-		out.println("<HTML>\n<BODY>\n" + buffer.toString().replaceAll("\n", "<BR>\n") + "</BODY></HTML>");
+		out.println("<HTML>\n<BODY>\n" + buffer.toString().replaceAll("\n", "<BR>\n") +
+				"<button onclick=\"window.location.href='/myapp/index.html'\">Back</button>"+
+
+				"</BODY></HTML>");
 	}
 }
